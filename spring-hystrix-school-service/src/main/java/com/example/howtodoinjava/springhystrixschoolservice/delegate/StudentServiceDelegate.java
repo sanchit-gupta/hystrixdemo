@@ -23,10 +23,6 @@ public class StudentServiceDelegate {
 	public String callStudentServiceAndGetData(String schoolname) throws InterruptedException {
 		System.out.println("Getting School details for " + schoolname);
 
-
-//		if(System.currentTimeMillis()  % 2 == 0) {
-//			Thread.sleep(2000);
-//		}
 		String response = restTemplate
 				.exchange("http://localhost:8098/getStudentDetailsForSchool/{schoolname}"
 				, HttpMethod.GET
